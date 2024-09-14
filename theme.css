@@ -86,13 +86,7 @@ html{
     text-align: center; /* Centra el texto */
     font-size: 1.2em; /* Reduce el tamaño de la fuente (ajusta según tus necesidades) */
     margin: 0 auto; /* Centra el elemento en su contenedor (opcional) */
-    max-width: 80%; /* Ajusta el ancho máximo del párrafo si es necesario */
-}
-audio{
-    border-radius: 10px;
-    margin: 0 auto 20px; /* Centra el reproductor y añade margen inferior */
-    max-width: 100%; /* Asegura que no se desborde del contenedor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del reproductor */
+    max-width: 100%; /* Ajusta el ancho máximo del párrafo si es necesario */
 }
 /* byev */
 .container {
