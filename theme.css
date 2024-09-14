@@ -1,5 +1,7 @@
 /* theme.css */
-
+* {
+    box-sizing: border-box;
+}
 html{
     margin: 0;
     height: 100vh;
@@ -20,7 +22,7 @@ html{
     text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
 .heading-text img {
-    width: 350px; /* Ajusta el ancho de la imagen */
+    width: px; /* Ajusta el ancho de la imagen */
     height: 280px; /* Ajusta automáticamente la altura para mantener la proporción */
     margin-bottom: -10px; /* Ajusta el margen para reducir la separación con el texto */
     filter: brightness(1.1);
@@ -51,7 +53,6 @@ html{
 .headerT{
     color: #030303;
 }
-
 
 .section img {
     width: 100%; /* Ocupa el 100% del ancho disponible */
@@ -86,19 +87,20 @@ html{
     text-align: center; 
     font-size: 1.2em;
     margin: 0 auto; 
-    max-width: 80%;
+    max-width: 100%;
 } 
 
 /* byev */
 .container {
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
     background-image: url(./img/nuevo.jpg) ;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-    max-width: 100%; /* Asegura que no se desborde del contenedor */
     box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    overflow: hidden;
 }
 
 .title {
@@ -248,6 +250,18 @@ p{
 
     .details-item {
         margin-bottom: 15px; /* Añadir espacio entre los elementos */
+    }
+    .heading-text {
+        font-size: 1.5em; /* Ajusta el tamaño del texto en móviles */
+    }
+    .container {
+        padding: 20px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+    .title {
+        font-size: 2em; /* Ajusta el tamaño del título en móviles */
+    }
+    .text-peque {
+        font-size: 1em; /* Ajusta el tamaño del texto pequeño en móviles */
     }
 }
 
