@@ -91,13 +91,13 @@ html{
 
 /* byev */
 .container {
-    max-width: 100%; /* Asegura que no se desborde del contenedor */
     background-image: url(./img/nuevo.jpg) ;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
     box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
