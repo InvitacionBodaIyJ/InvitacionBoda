@@ -13,12 +13,23 @@
     
     <header class="header">
       <div class="heading-text ">
-
+        <img src="img/C.png" alt="">
+        <h1> Invitación Especial</h1>
         <h1>Isaac & Jeannifer</h1>
         <p class="headerT"> Se van a casar!</p>
       </div>
       
     </header>
+    <section class="section">
+      <div class="container">
+          <audio src="img/audio/musica.mp3" controls autoplay loop></audio>
+        <p class="text-peque">Hay eventos en la vida que son muy especiales por si solos, 
+          pero poder compartirlos con quién más queremos, 
+          los convierte en momentos únicos e inolvidables.</p>
+        <p>Te esperamos en nuestra boda.</p>
+      </div>
+    </section>
+    
     <section class="section">
       <div class="container">     
         <h1 class="title">NUESTRA BODA</h1>
@@ -78,15 +89,6 @@
     </section>
 
     <script src="./js/smooth-scroll.polyfills.min.js"></script>
-    <script defer>
-      var scroll = new SmoothScroll('a[href*="#"]');
-      var rsvpButton = document.getElementById('rsvpButton')
-      rsvpButton.addEventListener('click',hideButton,false);
-
-      function hideButton() {
-        rsvpButton.style.display = 'none';
-      }   
-    </script>
     <script>
       const rainContainer = document.querySelector('.rain-container');
 const numberOfDrops = 50; // Number of rain drops 
