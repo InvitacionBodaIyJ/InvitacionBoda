@@ -1,13 +1,11 @@
-*{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    color: #222;
-}
-html, body{
+/* theme.css */
+
+html{
     margin: 0;
     height: 100vh;
     text-align: center;
 }
+
 .header{
     background-image: url(./img/dies.png);
     background-repeat: no-repeat;
@@ -32,11 +30,14 @@ html, body{
 }
 .heading-text {
     text-align: center;
-    color: #fff;
+    color: #030303;
     font-family: 'Caveat', cursive;
     font-size: 3em;
     opacity: 0; /* Ocultamos el texto inicialmente */
     animation: slideIn 2s ease-out forwards; /* Aplicamos la animación */
+}
+.headerT{
+    color: #030303;
 }
 
 .fixed-button{
@@ -68,32 +69,139 @@ html, body{
     width: 100%; /* Ocupa el 100% del ancho disponible */
     height: auto; /* Mantiene la proporción original */
     display: block; /* Elimina el espacio blanco debajo de la imagen */
+    position: absolute; /* Para posicionar la imagen */
+    top: 0; /* Ajusta la posición vertical */
+    left: 0; /* Ajusta la posición horizontal */
+    z-index: -1; /* Para que el texto quede sobre la imagen */
+    opacity: 0.5; /* Para que la imagen sea semi-transparente */
+    object-fit: cover; /* Para que la imagen se ajuste al contenedor */
+    animation: appearFromCenter 1s ease-out; /* Aplica la animación */
+}
+.section{
+    animation: appearFromCenter 1s ease-out; /* Aplica la animación */
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
     font-size: 3em;
     margin-top: 2em;
 }
-.details{
-    margin: 0 auto 8em;
+/* byev */
+.container {
+    background-image: url(./img/nuevo.jpg) ;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
 }
-.details-heading{
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.fas {
+
+.title {
     font-size: 3em;
-    opacity: .8;
+    color: #333;
+    margin-bottom: 30px;
 }
-.resort-image{
-    width: 100%
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
 }
-.container img {
+
+.details-item {
+    text-align: center;
+    width: 99%;
+    font-size: 16px;
+}
+.details-item h3 {
+    font-size: 1.5em;
+    color: #609775;
+    margin-bottom: 10px;
+}
+
+.details-item p {
+    font-size: 2em;
+    color: #555;
+}
+
+.invitation {
+    font-size: 2em;
+    color: #609775;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.color-box:nth-child(1) {
+    background-color: #55ACEE;
+}
+
+.color-box:nth-child(2) {
+    background-color: #C6AE92;
+}
+
+.color-code1 {
+    color: #55ACEE;
+    font-size: 14px;
+    padding: relative;
+}
+.color-code2 {
+    color: #C6AE92;
+    font-size: 14px;
+    padding: relative;
+}
+p{
+    font-size: 2em;
+    color: #609775;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.rain-container {
+    position: absolute;
     width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    height: 200px;
+    overflow: hidden;
 }
+.rain-drop {
+    position: relative;
+    width: 5px;
+    height: 20px;
+    background-color: #0059ff;
+    border-radius: 10px;
+    animation: rain 3s infinite;
+}
+@keyframes rain{
+    0% {
+        top: -20px;
+        opacity: 0.5;
+    }
+    100% {
+        top: 200px;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 3em; /* Reducimos el tamaño de la fuente en móviles */
@@ -119,7 +227,18 @@ html, body{
         width: 100%;
         height: auto; /* Mantiene la proporción original */
     }
+    .details {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .details-item {
+        margin-bottom: 15px; /* Añadir espacio entre los elementos */
+    }
 }
+
+
+/* animaciones*/
 @keyframes slideIn {
     from {
         transform: translateX(100%); /* Empieza desde la derecha */
@@ -130,3 +249,14 @@ html, body{
         opacity: 1;
     }
 }
+@keyframes appearFromCenter{
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Comienza desde un tamaño pequeño */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Tamaño normal */
+    }
+}
+
