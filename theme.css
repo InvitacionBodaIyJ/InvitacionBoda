@@ -72,6 +72,7 @@ html{
     opacity: 0; /* Oculta las secciones por defecto */
     transform: translateY(50px); /* Desplaza hacia abajo */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Suaviza la animación */
+    animation: appearFromCenter 1s ease-out; /* Aplica la animación */
 }
 
 .section.show {
