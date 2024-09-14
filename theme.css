@@ -4,6 +4,7 @@ html{
     margin: 0;
     height: 100vh;
     text-align: center;
+    overflow-x: hidden;
 }
 
 .header{
@@ -18,6 +19,13 @@ html{
     position: relative;
     text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
+.heading-text img {
+    width: 350px; /* Ajusta el ancho de la imagen */
+    height: 280px; /* Ajusta automáticamente la altura para mantener la proporción */
+    margin-bottom: -10px; /* Ajusta el margen para reducir la separación con el texto */
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
 
 .heading-text h1 {
     font-size: 2em;
@@ -31,7 +39,7 @@ html{
     margin-top: 10px;
     text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
-.heading-text {
+.heading-text { 
     text-align: center;
     color: #030303;
     font-family: 'Caveat', cursive;
@@ -47,7 +55,7 @@ html{
 
 .section img {
     width: 100%; /* Ocupa el 100% del ancho disponible */
-    height: auto; /* Mantiene la proporción original */
+    height: 100%; /* Mantiene la proporción original */
     display: block; /* Elimina el espacio blanco debajo de la imagen */
     position: absolute; /* Para posicionar la imagen */
     top: 0; /* Ajusta la posición vertical */
@@ -57,10 +65,12 @@ html{
     animation: appearFromCenter 1s ease-out; /* Aplica la animación */
 }
 .section{
-    
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 100%; /* Mantiene la proporción original */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
     opacity: 0; /* Oculta las secciones por defecto */
     transform: translateY(50px); /* Desplaza hacia abajo */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Suaviza la animación */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Suaviza la animación */
 }
 
 .section.show {
@@ -72,6 +82,18 @@ html{
     font-size: 3em;
     margin-top: 2em;
 }
+.text-peque {
+    text-align: center; /* Centra el texto */
+    font-size: 1.2em; /* Reduce el tamaño de la fuente (ajusta según tus necesidades) */
+    margin: 0 auto; /* Centra el elemento en su contenedor (opcional) */
+    max-width: 80%; /* Ajusta el ancho máximo del párrafo si es necesario */
+}
+audio{
+    border-radius: 10px;
+    margin: 0 auto 20px; /* Centra el reproductor y añade margen inferior */
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del reproductor */
+}
 /* byev */
 .container {
     background-image: url(./img/nuevo.jpg) ;
@@ -80,6 +102,7 @@ html{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
+    
 }
 
 .title {
