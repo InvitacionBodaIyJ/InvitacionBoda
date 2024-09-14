@@ -1,0 +1,188 @@
+<!-- inde.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>invitación de boda Isaac y Jeannifer</title>
+    <link rel="stylesheet" type="text/css" href="theme.css"> 
+    <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css"> 
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="envelope">
+      <!-- Aquí estará la carta con la invitación -->
+      
+      <div class="envelope-back"></div>
+      <div class="envelope-front">
+          <!-- Botón para abrir el sobre -->
+           <h3>invitacion de boda </h3>
+
+          <button class="open-envelope-btn" onclick="openEnvelope()">Abrir</button>
+      </div>
+      <div class="letter">
+    <header class="header">
+      <div class="heading-text ">
+
+        <h1>Isaac & Jeannifer</h1>
+        <p class="headerT"> Se van a casar!</p>
+      </div>
+      
+    </header>
+    <section class="section">
+      <div class="container">     
+        <h1 class="title">NUESTRA BODA</h1>
+        <div class="details">
+            <div class="details-item">
+                <h3>¿CUÁNDO?</h3>
+                <p>19 de diciembre de 2024</p>
+            </div>
+            <div class="details-item">
+                <h3>CÓDIGO DE VESTIMENTA</h3>
+                <p>Casual </p>
+            </div>
+        </div>
+        <div class="details">
+            <div class="details-item">
+                <h3>¿DÓNDE?</h3>
+                <p>Los corales, calle 19, quinta Jeannparis</p>
+                <!-- HTML -->
+                <a href="https://maps.app.goo.gl/AwiGQdy5iQKN59zs7" target="_blank" class="map-button">
+                  Ver Ubicación
+                </a>
+            </div>
+        </div>
+        <p class="invitation">¡Esperamos que puedas celebrar este día con nosotros!</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+          <h1 class="title">Vestimenta</h1>
+          <h2>EN NUESTRA BODA DESEAMOS QUE CADA INVITADO CUENTE CON ALGO DE QUE TENGA ESTOS COLORES</h2>
+          <div class="colors">
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+          </div>
+          <div class="color-code1">
+            #55ACEE
+          </div>
+          <div class="color-code2">
+            #C6AE92
+          </div>
+        <p>¡Si no pueden igualmente estarán bien!</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+          <div class="rain-container">
+            <div class="rain-drop"></div>
+            </div>
+            <h1 class="title">Lluvia de Sobres</h1>
+            <h3>PARA NOSOTROS NO HAY MEJOR REGALO QUE CONTAR CON USTEDES EN ESE DÍA TAN ESPECIAL, 
+              PERO SI DESEAS COLABORAR CON NOSOTROS PUEDES DEJARNOS ALGO EN UN SOBRE 
+              JUNTO CON UN BONITO MENSAJE</h3>
+              <p>¡La intención es lo que cuenta.!</p>
+      </div>
+    </section>
+  </div>
+    <script src="./js/smooth-scroll.polyfills.min.js"></script>
+    <script defer>
+      var scroll = new SmoothScroll('a[href*="#"]');
+      var rsvpButton = document.getElementById('rsvpButton')
+      rsvpButton.addEventListener('click',hideButton,false);
+
+      function hideButton() {
+        rsvpButton.style.display = 'none';
+      }   
+    </script>
+<script>
+      const rainContainer = document.querySelector('.rain-container');
+const numberOfDrops = 50; // Number of rain drops 
+
+// Generate a random number within a range
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Create rain drops dynamically
+for (let i = 0; i < numberOfDrops; i++) {
+  const rainDrop = document.createElement('div');
+  rainDrop.classList.add('rain-drop');
+  rainDrop.style.left = getRandomNumber(0, window.innerWidth) + 'px';
+  rainDrop.style.animationDelay = getRandomNumber(0, 3) + 's'; // Random delay for staggered effect
+  rainContainer.appendChild(rainDrop);
+}
+    </script>
+    <script>
+      function openEnvelope() {
+          document.querySelector('.envelope').classList.add('open');
+      }
+  </script>
+  </body>
+</html>
+
+<!-- /* Estilos del sobre */
+.envelope {
+    position: relative;
+    width: 90%; /* Ajusta el tamaño del sobre */
+    max-width: 500px;
+    margin: 50px auto;
+    perspective: 1000px; /* Para la animación 3D */
+}
+
+.envelope-front, .envelope-back {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: #3dc993b0; /* Color del sobre */
+    border-radius: 10px;
+    transition: transform 1s;
+    backface-visibility: hidden;
+}
+
+.envelope-front {
+    z-index: 2;
+    transform-origin: bottom;
+}
+
+.envelope-back {
+    top: 0;
+    background: #d4bda7; /* Color de la parte trasera del sobre */
+    z-index: 1;
+}
+
+.letter {
+    display: none;
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 1px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.envelope.open .envelope-front {
+    transform: rotateX(-180deg); /* Gira la parte frontal */
+}
+
+.envelope.open .letter {
+    display: block;
+}
+
+/* Estilos para el botón */
+.open-envelope-btn {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: #609775;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 3;
+} -->
+

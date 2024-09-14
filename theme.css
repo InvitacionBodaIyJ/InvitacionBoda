@@ -1,13 +1,12 @@
-*{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    color: #222;
-}
-html, body{
+/* theme.css */
+
+html{
     margin: 0;
     height: 100vh;
     text-align: center;
+    overflow-x: hidden;
 }
+
 .header{
     background-image: url(./img/dies.png);
     background-repeat: no-repeat;
@@ -18,82 +17,205 @@ html, body{
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     position: relative;
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
+}
+.heading-text img {
+    width: 350px; /* Ajusta el ancho de la imagen */
+    height: 280px; /* Ajusta automáticamente la altura para mantener la proporción */
+    margin-bottom: -10px; /* Ajusta el margen para reducir la separación con el texto */
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
 }
 
 .heading-text h1 {
     font-size: 2em;
     margin: 0;
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
 
 .heading-text p {
     font-size: 1em;
     margin: 0;
     margin-top: 10px;
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
-.heading-text {
+.heading-text { 
     text-align: center;
-    color: #fff;
+    color: #030303;
     font-family: 'Caveat', cursive;
     font-size: 3em;
     opacity: 0; /* Ocultamos el texto inicialmente */
     animation: slideIn 2s ease-out forwards; /* Aplicamos la animación */
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
+}
+.headerT{
+    color: #030303;
 }
 
-.fixed-button{
-    background: rgba(20,20,20,.5);
-    border-radius: 1em;
-    bottom: 1em;
-    color: white;
-    font-weight: bold;
-    padding: 1em;
-    position: fixed;
-    right: 1em;
-    text-decoration: none;
-    z-index: 9999;
-}
-.fixed-button::after{
-    content: "\25BE";
-    display: block;
-    font-size: 28px;
-    line-height: 0;
-    margin-bottom: 6px;
-    margin-top: 10px;
-    text-align: center;
-}
-.fixed-button:active,
-.fixed-button:hover{
-    background: rgba(20,20,20,.9);
-}
+
+.section img {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 100%; /* Mantiene la proporción original */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+    position: absolute; /* Para posicionar la imagen */
+    top: 0; /* Ajusta la posición vertical */
+    left: 0; /* Ajusta la posición horizontal */
+    z-index: -1; /* Para que el texto quede sobre la imagen */
+    object-fit: cover; /* Para que la imagen se ajuste al contenedor */
+    animation: appearFromCenter 1s ease-out; /* Aplica la animación */
+    }
 .section{
-    margin:0 auto;
-    max-width: auto;
-    padding: 1em 2.4em;
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 100%; /* Mantiene la proporción original */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+    opacity: 0; /* Oculta las secciones por defecto */
+    transform: translateY(50px); /* Desplaza hacia abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Suaviza la animación */
+}
+
+.section.show {
+    opacity: 1; /* Hace visible la sección */
+    transform: translateY(0); /* Vuelve a la posición original */
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
     font-size: 3em;
     margin-top: 2em;
 }
-.details{
-    margin: 0 auto 8em;
+.text-peque {
+    text-align: center; 
+    font-size: 1.2em;
+    margin: 0 auto; 
+    max-width: 80%;
+} 
+
+/* byev */
+.container {
+    background-image: url(./img/nuevo.jpg) ;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
-.details-heading{
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.fas {
+
+.title {
     font-size: 3em;
-    opacity: .8;
+    color: #333;
+    margin-bottom: 30px;
 }
-.resort-image{
-    width: 100%
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
 }
-.container img {
+
+.details-item {
+    text-align: center;
+    width: 99%;
+    font-size: 16px;
+}
+.details-item h3 {
+    font-size: 1.5em;
+    color: #609775;
+    margin-bottom: 10px;
+}
+
+.details-item p {
+    font-size: 2em;
+    color: #555;
+}
+
+.invitation {
+    font-size: 2em;
+    color: #609775;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.color-box:nth-child(1) {
+    background-color: #55ACEE;
+}
+
+.color-box:nth-child(2) {
+    background-color: #C6AE92;
+}
+
+.color-code1 {
+    color: #55ACEE;
+    font-size: 14px;
+    padding: relative;
+}
+.color-code2 {
+    color: #C6AE92;
+    font-size: 14px;
+    padding: relative;
+}
+p{
+    font-size: 2em;
+    color: #609775;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.rain-container {
+    position: absolute;
     width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    height: 200px;
+    overflow: hidden;
 }
+.rain-drop {
+    position: relative;
+    width: 5px;
+    height: 20px;
+    background-color: #0059ff;
+    border-radius: 10px;
+    animation: rain 3s infinite;
+}
+@keyframes rain{
+    0% {
+        top: -20px;
+        opacity: 0.5;
+    }
+    100% {
+        top: 200px;
+        opacity: 0;
+    }
+}
+
+
+.map-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #609775;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.map-button:hover {
+    background-color: #067a32;
+}
+
 @media only screen and (max-width: 600px) {
     .heading {
         font-size: 3em; /* Reducimos el tamaño de la fuente en móviles */
@@ -115,7 +237,22 @@ html, body{
     .heading-text p {
         font-size: 1em;
     }
+    .section img {
+        width: 100%;
+        height: auto; /* Mantiene la proporción original */
+    }
+    .details {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .details-item {
+        margin-bottom: 15px; /* Añadir espacio entre los elementos */
+    }
 }
+
+
+/* animaciones*/
 @keyframes slideIn {
     from {
         transform: translateX(100%); /* Empieza desde la derecha */
@@ -124,5 +261,15 @@ html, body{
     to {
         transform: translateX(0); /* Llega a su posición normal */
         opacity: 1;
+    }
+}
+@keyframes appearFromCenter{
+    from {
+        opacity: 0;
+        transform: scale(0.5); /* Comienza desde un tamaño pequeño */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Tamaño normal */
     }
 }
