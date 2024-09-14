@@ -16,17 +16,20 @@ html{
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
     position: relative;
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
 
 .heading-text h1 {
     font-size: 2em;
     margin: 0;
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
 
 .heading-text p {
     font-size: 1em;
     margin: 0;
     margin-top: 10px;
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
 .heading-text {
     text-align: center;
@@ -35,36 +38,13 @@ html{
     font-size: 3em;
     opacity: 0; /* Ocultamos el texto inicialmente */
     animation: slideIn 2s ease-out forwards; /* Aplicamos la animación */
+    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
 }
 .headerT{
     color: #030303;
 }
 
-.fixed-button{
-    background: rgba(20,20,20,.5);
-    border-radius: 1em;
-    bottom: 1em;
-    color: white;
-    font-weight: bold;
-    padding: 1em;
-    position: fixed;
-    right: 1em;
-    text-decoration: none;
-    z-index: 9999;
-}
-.fixed-button::after{
-    content: "\25BE";
-    display: block;
-    font-size: 28px;
-    line-height: 0;
-    margin-bottom: 6px;
-    margin-top: 10px;
-    text-align: center;
-}
-.fixed-button:active,
-.fixed-button:hover{
-    background: rgba(20,20,20,.9);
-}
+
 .section img {
     width: 100%; /* Ocupa el 100% del ancho disponible */
     height: auto; /* Mantiene la proporción original */
@@ -73,12 +53,19 @@ html{
     top: 0; /* Ajusta la posición vertical */
     left: 0; /* Ajusta la posición horizontal */
     z-index: -1; /* Para que el texto quede sobre la imagen */
-    opacity: 0.5; /* Para que la imagen sea semi-transparente */
     object-fit: cover; /* Para que la imagen se ajuste al contenedor */
     animation: appearFromCenter 1s ease-out; /* Aplica la animación */
 }
 .section{
-    animation: appearFromCenter 1s ease-out; /* Aplica la animación */
+    
+    opacity: 0; /* Oculta las secciones por defecto */
+    transform: translateY(50px); /* Desplaza hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Suaviza la animación */
+}
+
+.section.show {
+    opacity: 1; /* Hace visible la sección */
+    transform: translateY(0); /* Vuelve a la posición original */
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
@@ -195,12 +182,20 @@ p{
 }
 
 
+.map-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #609775;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
 
-
-
-
-
-
+.map-button:hover {
+    background-color: #067a32;
+}
 
 @media only screen and (max-width: 600px) {
     .heading {
