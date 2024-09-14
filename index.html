@@ -1,3 +1,4 @@
+<!-- inde.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,28 +14,64 @@
       <div class="heading-text">
 
         <h1>Isaac y Jeannifer</h1>
-        <p> Se van a casar!</p>
+        <p class="headerT"> Se van a casar!</p>
       </div>
       
     </header>
-    <a data-scroll class="fixed-button" href="#rsvp" id="rsvpButton">Final</a> 
     <section class="section">
-    <div class="container">
-      <img src="img/2.png" alt="">
-    </div>
+      <div class="container">     
+        <h1 class="title">NUESTRA BODA</h1>
+        <div class="details">
+            <div class="details-item">
+                <h3>¿CUÁNDO?</h3>
+                <p>19 de diciembre de 2024</p>
+            </div>
+            <div class="details-item">
+                <h3>CÓDIGO DE VESTIMENTA</h3>
+                <p>Casual </p>
+            </div>
+        </div>
+        <div class="details">
+            <div class="details-item">
+                <h3>¿DÓNDE?</h3>
+                <p>Los corales, calle 19, quinta Jeannparis</p>
+            </div>
+        </div>
+        <p class="invitation">¡Esperamos que puedas celebrar este día con nosotros!</p>
+      </div>
     </section>
+
     <section class="section">
       <div class="container">
-
-        <img src="img/3.png" alt="">
+          <h1 class="title">Vestimenta</h1>
+          <h2>EN NUESTRA BODA DESEAMOS QUE CADA INVITADO CUENTE CON ALGO DE QUE TENGA ESTOS COLORES</h2>
+          <div class="colors">
+            <div class="color-box"></div>
+            <div class="color-box"></div>
+          </div>
+          <div class="color-code1">
+            #55ACEE
+          </div>
+          <div class="color-code2">
+            #C6AE92
+          </div>
+        <p>¡Si no pueden igualmente estarán bien!</p>
       </div>
-      </section>
-      <section class="section">
-        <div class="container">
-          <img src="img/4.png" alt="">
-        </div>
-        </section>
-      
+    </section>
+
+    <section class="section">
+      <div class="container">
+          <div class="rain-container">
+            <div class="rain-drop"></div>
+            </div>
+            <h1 class="title">Lluvia de Sobres</h1>
+            <h3>PARA NOSOTROS NO HAY MEJOR REGALO QUE CONTAR CON USTEDES EN ESE DÍA TAN ESPECIAL, 
+              PERO SI DESEAS COLABORAR CON NOSOTROS PUEDES DEJARNOS ALGO EN UN SOBRE 
+              JUNTO CON UN BONITO MENSAJE</h3>
+              <p>¡La intención es lo que cuenta.!</p>
+      </div>
+    </section>
+
     <script src="./js/smooth-scroll.polyfills.min.js"></script>
     <script defer>
       var scroll = new SmoothScroll('a[href*="#"]');
@@ -44,6 +81,24 @@
       function hideButton() {
         rsvpButton.style.display = 'none';
       }   
+    </script>
+    <script>
+      const rainContainer = document.querySelector('.rain-container');
+const numberOfDrops = 50; // Number of rain drops 
+
+// Generate a random number within a range
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+// Create rain drops dynamically
+for (let i = 0; i < numberOfDrops; i++) {
+  const rainDrop = document.createElement('div');
+  rainDrop.classList.add('rain-drop');
+  rainDrop.style.left = getRandomNumber(0, window.innerWidth) + 'px';
+  rainDrop.style.animationDelay = getRandomNumber(0, 3) + 's'; // Random delay for staggered effect
+  rainContainer.appendChild(rainDrop);
+}
     </script>
   </body>
 </html>
