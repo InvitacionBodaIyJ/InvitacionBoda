@@ -64,10 +64,10 @@ html, body{
 .fixed-button:hover{
     background: rgba(20,20,20,.9);
 }
-.section{
-    margin:0 auto;
-    max-width: auto;
-    padding: 1em 2.4em;
+.section img {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: auto; /* Mantiene la proporción original */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
 }
 .sub-heading{
     font-family: 'Caveat', cursive;
@@ -114,6 +114,10 @@ html, body{
     }
     .heading-text p {
         font-size: 1em;
+    }
+    .section img {
+        width: 100%;
+        height: auto; /* Mantiene la proporción original */
     }
 }
 @keyframes slideIn {
