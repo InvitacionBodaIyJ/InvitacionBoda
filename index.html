@@ -1,24 +1,21 @@
-<!-- inde.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>invitación de boda Isaac y Jeannifer</title>
+    <title>Invitación de boda Isaac y Jeannifer</title>
     <link rel="stylesheet" type="text/css" href="theme.css"> 
     <link rel="stylesheet" type="text/css" href="./icons/css/all.min.css"> 
     <link href="https://fonts.googleapis.com/css?family=Caveat|Quicksand&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    
+</head>
+<body>
     <header class="header">
-      <div class="heading-text ">
-        <img src="img/C.png" alt="">
-        <h1> Invitación Especial</h1>
-        <h1>Isaac & Jeannifer</h1>
-        <p class="headerT"> Se van a casar!</p>
-      </div>
-      
+        <div class="heading-text">
+            <img src="img/C.png" alt="">
+            <h1>Invitación Especial</h1>
+            <h1>Isaac & Jeannifer</h1>
+            <p class="headerT">¡Se van a casar!</p>
+        </div>
     </header>
     <section class="section">
       <div class="container">
@@ -29,107 +26,97 @@
         <p>Te esperamos en nuestra boda.</p>
       </div>
     </section>
-    
     <section class="section">
-      <div class="container">     
-        <h1 class="title">NUESTRA BODA</h1>
-        <div class="details">
-            <div class="details-item">
-                <h3>¿CUÁNDO?</h3>
-                <p>19 de diciembre de 2024</p>
+        <div class="container">     
+            <h1 class="title">NUESTRA BODA</h1>
+            <div class="details">
+                <div class="details-item">
+                    <h3>¿CUÁNDO?</h3>
+                    <p>19 de diciembre de 2024</p>
+                </div>
+                <div class="details-item">
+                    <h3>CÓDIGO DE VESTIMENTA</h3>
+                    <p>Casual</p>
+                </div>
             </div>
-            <div class="details-item">
-                <h3>CÓDIGO DE VESTIMENTA</h3>
-                <p>Casual </p>
+            <div class="details">
+                <div class="details-item">
+                    <h3>¿DÓNDE?</h3>
+                    <p>Los corales, calle 19, quinta Jeannparis</p>
+                    <a href="https://maps.app.goo.gl/AwiGQdy5iQKN59zs7" target="_blank" class="map-button">Ver Ubicación</a>
+                </div>
             </div>
+            <p class="invitation">¡Esperamos que puedas celebrar este día con nosotros!</p>
         </div>
-        <div class="details">
-            <div class="details-item">
-                <h3>¿DÓNDE?</h3>
-                <p>Los corales, calle 19, quinta Jeannparis</p>
-                <!-- HTML -->
-                <a href="https://maps.app.goo.gl/AwiGQdy5iQKN59zs7" target="_blank" class="map-button">
-                  Ver Ubicación
-                </a>
-            </div>
-        </div>
-        <p class="invitation">¡Esperamos que puedas celebrar este día con nosotros!</p>
-      </div>
     </section>
 
     <section class="section">
-      <div class="container">
-          <h1 class="title">Vestimenta</h1>
-          <h2>EN NUESTRA BODA DESEAMOS QUE CADA INVITADO CUENTE CON ALGO DE QUE TENGA ESTOS COLORES</h2>
-          <div class="colors">
-            <div class="color-box"></div>
-            <div class="color-box"></div>
-          </div>
-          <div class="color-code1">
-            #55ACEE
-          </div>
-          <div class="color-code2">
-            #C6AE92
-          </div>
-        <p>¡Si no pueden igualmente estarán bien!</p>
-      </div>
+        <div class="container">
+            <h1 class="title">Vestimenta</h1>
+            <h2>EN NUESTRA BODA DESEAMOS QUE CADA INVITADO CUENTE CON ALGO QUE TENGA ESTOS COLORES</h2>
+            <div class="colors">
+                <div class="color-box"></div>
+                <div class="color-box"></div>
+            </div>
+            <div class="color-code1">#55ACEE</div>
+            <div class="color-code2">#C6AE92</div>
+            <p>¡Si no pueden, igualmente estarán bien!</p>
+        </div>
     </section>
 
     <section class="section">
-      <div class="container">
-          <div class="rain-container">
-            <div class="rain-drop"></div>
+        <div class="container">
+            <div class="rain-container">
+                <div class="rain-drop"></div>
             </div>
             <h1 class="title">Lluvia de Sobres</h1>
-            <h3>PARA NOSOTROS NO HAY MEJOR REGALO QUE CONTAR CON USTEDES EN ESE DÍA TAN ESPECIAL, 
-              PERO SI DESEAS COLABORAR CON NOSOTROS PUEDES DEJARNOS ALGO EN UN SOBRE 
-              JUNTO CON UN BONITO MENSAJE</h3>
-              <p>¡La intención es lo que cuenta.!</p>
+            <h3>PARA NOSOTROS NO HAY MEJOR REGALO QUE CONTAR CON USTEDES EN ESE DÍA TAN ESPECIAL. 
+                PERO SI DESEAS COLABORAR CON NOSOTROS PUEDES DEJARNOS ALGO EN UN SOBRE 
+                JUNTO CON UN BONITO MENSAJE</h3>
+            <p>¡La intención es lo que cuenta!</p>
+        </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <p>Gracias a nuestras familias y amigos por ser testigos de este amor que hoy se celebra.
+        </p>
+        <p>Su presencia hace que este día sea aún más significativo.</p>
       </div>
     </section>
 
     <script src="./js/smooth-scroll.polyfills.min.js"></script>
     <script>
-      const rainContainer = document.querySelector('.rain-container');
-const numberOfDrops = 50; // Number of rain drops 
+        const rainContainer = document.querySelector('.rain-container');
+        const numberOfDrops = 50; // Number of rain drops
 
-// Generate a random number within a range
-function getRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
 
-// Create rain drops dynamically
-for (let i = 0; i < numberOfDrops; i++) {
-  const rainDrop = document.createElement('div');
-  rainDrop.classList.add('rain-drop');
-  rainDrop.style.left = getRandomNumber(0, window.innerWidth) + 'px';
-  rainDrop.style.animationDelay = getRandomNumber(0, 3) + 's'; // Random delay for staggered effect
-  rainContainer.appendChild(rainDrop);
-}
+        for (let i = 0; i < numberOfDrops; i++) {
+            const rainDrop = document.createElement('div');
+            rainDrop.classList.add('rain-drop');
+            rainDrop.style.left = getRandomNumber(0, window.innerWidth) + 'px';
+            rainDrop.style.animationDelay = getRandomNumber(0, 3) + 's'; // Random delay for staggered effect
+            rainContainer.appendChild(rainDrop);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section'); // Selecciona todas las secciones
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // Añade la clase para mostrar la animación
+                        observer.unobserve(entry.target); // Deja de observar esta sección una vez que se ha animado
+                    }
+                });
+            }, { threshold: 0.1 }); // Se activa cuando el 10% de la sección es visible
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
     </script>
-    <script>
-      // index.html o script separado
-
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.section'); // Selecciona todas las secciones
-
-  // Configura el Intersection Observer
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          // Si la sección está en la vista
-          if (entry.isIntersecting) {
-              entry.target.classList.add('show'); // Añade la clase para mostrar la animación
-              observer.unobserve(entry.target); // Deja de observar esta sección una vez que se ha animado
-          }
-      });
-  }, { threshold: 0.1 }); // Se activa cuando el 10% de la sección es visible
-
-  // Observa cada sección
-  sections.forEach(section => {
-      observer.observe(section);
-  });
-});
-
-    </script>
-  </body>
+</body>
 </html>
