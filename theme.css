@@ -63,7 +63,7 @@ html{
     z-index: -1; /* Para que el texto quede sobre la imagen */
     object-fit: cover; /* Para que la imagen se ajuste al contenedor */
     animation: appearFromCenter 1s ease-out; /* Aplica la animación */
-}
+    }
 .section{
     width: 100%; /* Ocupa el 100% del ancho disponible */
     height: 100%; /* Mantiene la proporción original */
@@ -82,16 +82,23 @@ html{
     font-size: 3em;
     margin-top: 2em;
 }
+.text-peque {
+    text-align: center; 
+    font-size: 1.2em;
+    margin: 0 auto; 
+    max-width: 80%;
+} 
 
 /* byev */
 .container {
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
     background-image: url(./img/nuevo.jpg) ;
     padding: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
-    
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
 .title {
