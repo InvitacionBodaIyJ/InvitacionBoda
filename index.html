@@ -19,11 +19,33 @@
     </header>
     <section class="section">
       <div class="container">
+        <p> Dale play a nuestra cancion favorita. <br> Para apreciar su lectura.</p>
           <audio src="img/audio/musica.mp3" controls autoplay loop></audio>
         <p class="text-peque">Hay eventos en la vida que son muy especiales por si solos, 
           pero poder compartirlos con quién más queremos, 
           los convierte en momentos únicos e inolvidables.</p>
         <p>Te esperamos en nuestra boda.</p>
+        <div class="countdown-container">
+            <h1>¡Nos casamos en!</h1>
+            <div id="countdown">
+                <div class="time-box">
+                    <span id="days">0</span>
+                    <p>Días</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">0</span>
+                    <p>Horas</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">0</span>
+                    <p>Minutos</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">0</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
       </div>
     </section>
     <section class="section">
@@ -32,8 +54,13 @@
             <div class="details">
                 <div class="details-item">
                     <h3>¿CUÁNDO?</h3>
-                    <p>19 de diciembre de 2024</p>
+                    <P>Jueves</P>
+                    <p>19 de Diciembre de 2024</p>
                 </div>
+                <div class="details-item">
+                  <h3>HORA</h3>
+                  <p>2:00 PM</p>
+              </div>
                 <div class="details-item">
                     <h3>CÓDIGO DE VESTIMENTA</h3>
                     <p>Casual</p>
@@ -87,7 +114,7 @@
     <script src="./js/smooth-scroll.polyfills.min.js"></script>
     <script>
         const rainContainer = document.querySelector('.rain-container');
-        const numberOfDrops = 50; // Number of rain drops
+        const numberOfDrops = 100; // Number of rain drops
 
         function getRandomNumber(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
@@ -117,6 +144,35 @@
                 observer.observe(section);
             });
         });
+    </script>
+    <script>
+   // Fecha de destino: 19 de diciembre de 2024 a las 14:00
+const countdownDate = new Date("December 19, 2024 14:00:00").getTime();
+
+// Actualiza la cuenta regresiva cada segundo
+const countdownFunction = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+
+    // Cálculos de tiempo
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Muestra el resultado
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    // Si la cuenta regresiva termina
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "¡Es el día!";
+    }
+}, 1000);
+
     </script>
 </body>
 </html>

@@ -273,3 +273,58 @@ p{
         transform: scale(1); /* Tamaño normal */
     }
 }
+/* Contenedor de la cuenta regresiva */
+.countdown-container {
+    text-align: center;
+    background: transparent; /* Fondo transparente */
+    padding: 20px;
+}
+
+/* Estilos de título */
+.countdown-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Contenedor de tiempo */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los bloques */
+    flex-wrap: wrap; /* Permite que se ajuste a la pantalla */
+}
+
+/* Caja individual de tiempo */
+.time-box {
+    background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    color: #000000;
+    border: 2px solid #009255; /* Borde blanco */
+    border-radius: 15px;
+    padding: 15px;
+    width: 70px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para los números */
+.time-box span {
+    display: block;
+    font-size: 32px;
+}
+
+/* Estilos para las etiquetas de tiempo */
+.time-box p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 480px) {
+    .time-box {
+        width: 60px; /* Ajusta el tamaño para pantallas más pequeñas */
+    }
+}
