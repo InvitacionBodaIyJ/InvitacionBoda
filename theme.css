@@ -28,16 +28,16 @@ html{
 }
 
 .heading-text h1 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
-    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
+    text-shadow: 20px 2px 4px rgba(255, 255, 255, 0.986); /* Sombra de texto */
 }
 
 .heading-text p {
-    font-size: 1em;
+    font-size: 3em;
     margin: 0;
     margin-top: 10px;
-    text-shadow: 0px 2px 4px rgb(255, 255, 255); /* Sombra de texto */
+    text-shadow: 10px 2px 4px rgb(95, 160, 112); /* Sombra de texto */
 }
 .heading-text { 
     text-align: center;
@@ -50,6 +50,7 @@ html{
 }
 .headerT{
     color: #030303;
+
 }
 
 
@@ -105,6 +106,7 @@ html{
     font-size: 3em;
     color: #333;
     margin-bottom: 30px;
+    text-shadow: 3px 2px 4px rgb(95, 160, 112); /* Sombra de texto */
 }
 
 .details {
@@ -135,6 +137,7 @@ html{
     color: #609775;
     font-style: italic;
     margin-bottom: 30px;
+    
 }
 
 .colors {
@@ -200,6 +203,20 @@ p{
     }
 }
 
+.for-button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #609775;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.for-button:hover {
+    background-color: #067a32;
+}
 
 .map-button {
     display: inline-block;
